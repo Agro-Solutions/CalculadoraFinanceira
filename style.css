@@ -18,6 +18,10 @@
   float: left;
 }
 
+.infos .fonte {
+  margin-top: 20px;
+}
+
 .info2 {
   max-width: 450px;
   background-color: #8D6E63;
