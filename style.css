@@ -4,7 +4,7 @@ body {
 
 .header {
   text-align: center;
-  background-color: #232224;  
+  background-color: #232224;
 }
 
 .infos {
@@ -18,14 +18,14 @@ body {
   float: left;
 }
 
-.infos .fonte {
-  margin-top: 20px;
-}
-
 .info2 {
   width: 450px;
   background-color: #8d6e63;
   float: right;
+}
+
+.infos .fonte {
+  margin-top: 20px;
 }
 
 .container {
