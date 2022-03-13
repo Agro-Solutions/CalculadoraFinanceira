@@ -1,10 +1,10 @@
-    body {
+body {
   margin: 0;
 }
 
 .header {
   text-align: center;
-  background-color: #232224;
+  background-color: #232224;  
 }
 
 .infos {
@@ -13,8 +13,8 @@
 }
 
 .info1 {
-  max-width: 450px;
-  background-color: #FFD76B;
+  width: 450px;
+  background-color: #ffd76b;
   float: left;
 }
 
@@ -23,11 +23,10 @@
 }
 
 .info2 {
-  max-width: 450px;
-  background-color: #8D6E63;
+  width: 450px;
+  background-color: #8d6e63;
   float: right;
 }
-
 
 .container {
   margin: 320px auto;
@@ -35,11 +34,11 @@
 
 .container h2 {
   text-align: center;
-} 
+}
 
 .container .calc {
   text-align: center;
-  background-color: #FEFBFF;
+  background-color: #fefbff;
   border-radius: 10px;
   box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.25);
   width: 400px;
@@ -52,7 +51,7 @@
   border-radius: 5px;
 
   border: 1px solid #353436;
-  background: #F7F2FA;
+  background: #f7f2fa;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -63,15 +62,15 @@
 .btn {
   width: 150px;
   height: 50px;
-  color: #FEFBFF;
+  color: #fefbff;
   border: 0;
   cursor: pointer;
 }
 
 .btn-container .btn-calc {
-  background-color: #50E170;
+  background-color: #50e170;
 }
 
 .btn-container .btn-cotacao {
-  background-color: #F05454;
+  background-color: #f05454;
 }
