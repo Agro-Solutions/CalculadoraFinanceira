@@ -1,0 +1,73 @@
+    body {
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  background-color: #232224;
+}
+
+.infos {
+  width: 988px;
+  margin: 140px auto;
+}
+
+.info1 {
+  max-width: 450px;
+  background-color: #FFD76B;
+  float: left;
+}
+
+.info2 {
+  max-width: 450px;
+  background-color: #8D6E63;
+  float: right;
+}
+
+
+.container {
+  margin: 320px auto;
+}
+
+.container h2 {
+  text-align: center;
+} 
+
+.container .calc {
+  text-align: center;
+  background-color: #FEFBFF;
+  border-radius: 10px;
+  box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.25);
+  width: 400px;
+  margin: 0 auto;
+}
+
+.container .calc input {
+  width: 230px;
+  height: 30px;
+  border-radius: 5px;
+
+  border: 1px solid #353436;
+  background: #F7F2FA;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  color: #FEFBFF;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-container .btn-calc {
+  background-color: #50E170;
+}
+
+.btn-container .btn-cotacao {
+  background-color: #F05454;
+}
