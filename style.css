@@ -66,6 +66,7 @@ body {
   color: #fefbff;
   border: 0;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .btn-container .btn-calc {
@@ -73,7 +74,9 @@ body {
 }
 
 .btn-container .btn-cotacao {
-  background-color: #f05454;
+  color: #D9B043;
+  background-color: transparent;
+  margin: 20px auto;
 }
 
 .relatorio {

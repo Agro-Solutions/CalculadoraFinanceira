@@ -67,7 +67,9 @@
 
         <div class="btn-container">
           <button onclick="calcular()" class="btn btn-calc">Calcular</button>
-          <button class="btn btn-cotacao">Cotação atual</button>
+          <div onclick="obterCotacao()" class="btn btn-cotacao">
+            Obter cotação atual
+          </div>
         </div>
       </div>
     </div>
@@ -83,6 +85,11 @@
 </html>
 
 <script>
+  function obterCotacao() {
+    var valorCotacao = 201.77;
+    valor_saca_por_hectare.value = valorCotacao;
+  }
+
   function calcular() {
     var tamanhoHectares = Number(tamanho_hectares.value);
     var qtdSacasPorHectare = Number(qtd_sacas.value);
@@ -105,33 +112,48 @@
     valor_saca_por_hectare.value = '';
 
     conteudo_perda.innerHTML = `
-    <p><b>Sua produção total: <span style='color: #232224;'>100%</span></b></p>
-    <span style='color: #232224;'>${valorProducaoTotal.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })}</span>
-    <p><b>Você pode perder até: <span style='color: #D03333;'>15%</span></b></p>
-    <span style='color: #EB3D3D;'>${valorPossivelPerda.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })}</span>
-    <p><b>Valor final: <span style='color: #D03333;'>85%</span></b></p>
-    <span style='color: #EB3D3D;'>${valorFinalComPerda.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })}</span>
-`;
-    conteudo_melhora.innerHTML = `
-    <p><b>Aumento de: <span style='color: #28BB49;'>5%</span></b></p>
-    <span style='color: #32D957;'>${valorProducaoTotal.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })}</span>
-    <p><b>Valor final: <span style='color: #28BB49;'>90%</span></b></p>
-    <span style='color: #32D957;'>${valorPossivelPerda.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    })}</span>
+      <p><b>Sua produção total: <span style='color: #232224;'>100%</span></b></p>
+      <span style='color: #232224;'>${valorProducaoTotal.toLocaleString(
+        'pt-BR',
+        {
+          style: 'currency',
+          currency: 'BRL',
+        }
+      )}</span>
+      <p><b>Você pode perder até: <span style='color: #D03333;'>15%</span></b></p>
+      <span style='color: #EB3D3D;'>${valorPossivelPerda.toLocaleString(
+        'pt-BR',
+        {
+          style: 'currency',
+          currency: 'BRL',
+        }
+      )}</span>
+      <p><b>Valor final: <span style='color: #D03333;'>85%</span></b></p>
+      <span style='color: #EB3D3D;'>${valorFinalComPerda.toLocaleString(
+        'pt-BR',
+        {
+          style: 'currency',
+          currency: 'BRL',
+        }
+      )}</span>
   `;
+    conteudo_melhora.innerHTML = `
+      <p><b>Aumento de: <span style='color: #28BB49;'>5%</span></b></p>
+      <span style='color: #32D957;'>${valorProducaoTotal.toLocaleString(
+        'pt-BR',
+        {
+          style: 'currency',
+          currency: 'BRL',
+        }
+      )}</span>
+      <p><b>Valor final: <span style='color: #28BB49;'>90%</span></b></p>
+      <span style='color: #32D957;'>${valorPossivelPerda.toLocaleString(
+        'pt-BR',
+        {
+          style: 'currency',
+          currency: 'BRL',
+        }
+      )}</span>
+    `;
   }
 </script>
