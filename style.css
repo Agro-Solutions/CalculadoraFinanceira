@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 .header {
@@ -29,7 +30,7 @@ body {
 }
 
 .container {
-  margin: 320px auto;
+  margin: 320px auto 100px auto;
 }
 
 .container h2 {
@@ -73,4 +74,25 @@ body {
 
 .btn-container .btn-cotacao {
   background-color: #f05454;
+}
+
+.relatorio {
+  text-align: center;
+}
+
+.relatorio #container_relatorio {
+  text-align: center;
+  background-color: #fefbff;
+  border-radius: 10px;
+  box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.25);
+  width: 500px;
+  margin: 0 auto;
+}
+
+.relatorio #container_relatorio #conteudo_perda {
+  float: left;
+}
+
+.relatorio #container_relatorio #conteudo_melhora {
+  float: right;
 }
