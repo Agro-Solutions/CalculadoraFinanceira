@@ -103,20 +103,33 @@
     valor_saca_por_hectare.value = '';
 
     conteudo_perda.innerHTML = `
-    <p><b>Sua produção total: <span>100%</span></b></p>
-    <span>${valorProducaoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
-    <p><b>Você pode perder até: <span>15%</span></b></p>
-    <span>${valorPossivelPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
-    <p><b>Valor final: <span>85%</span></b></p>
-    <span>${valorFinalComPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Sua produção total: <span style='color: #232224;'>100%</span></b></p>
+    <span style='color: #232224;'>${valorProducaoTotal.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })}</span>
+    <p><b>Você pode perder até: <span style='color: #D03333;'>15%</span></b></p>
+    <span style='color: #EB3D3D;'>${valorPossivelPerda.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })}</span>
+    <p><b>Valor final: <span style='color: #D03333;'>85%</span></b></p>
+    <span style='color: #EB3D3D;'>${valorFinalComPerda.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })}</span>
 `;
     conteudo_melhora.innerHTML = `
-    <p><b>Sua produção total: <span>100%</span></b></p>
-    <span>${valorProducaoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
-    <p><b>Você pode perder até: <span>15%</span></b></p>
-    <span>${valorPossivelPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
-    <p><b>Valor final: <span>85%</span></b></p>
-    <span>${valorFinalComPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Aumento de: <span style='color: #28BB49;'>5%</span></b></p>
+    <span style='color: #32D957;'>${valorProducaoTotal.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })}</span>
+    <p><b>Valor final: <span style='color: #28BB49;'>90%</span></b></p>
+    <span style='color: #32D957;'>${valorPossivelPerda.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })}</span>
   `;
   }
 </script>
