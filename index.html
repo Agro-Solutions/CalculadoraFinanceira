@@ -42,29 +42,81 @@
       <div class="calc">
         <div>
           <p>Hectares</p>
-          <input type="text" placeholder="Informe a quantidade de hectares" />
+          <input
+            type="text"
+            id="tamanho_hectares"
+            placeholder="Informe a quantidade de hectares"
+          />
         </div>
         <div>
           <p>Sacas</p>
-          <input type="text" placeholder="Informe a quantidade de sacas" />
+          <input
+            type="text"
+            id="qtd_sacas"
+            placeholder="Informe a quantidade de sacas"
+          />
         </div>
         <div>
           <p>Valor da saca</p>
           <input
             type="text"
+            id="valor_saca_por_hectare"
             placeholder="Informe o valor da saca por hectares"
           />
         </div>
 
         <div class="btn-container">
-          <button class="btn btn-calc">Calcular</button>
+          <button onclick="calcular()" class="btn btn-calc">Calcular</button>
           <button class="btn btn-cotacao">Cotação atual</button>
         </div>
+      </div>
+    </div>
+    <div class="relatorio">
+      <h2>Com nossos servicos:</h2>
+
+      <div id="container_relatorio">
+        <div id="conteudo_perda"></div>
+        <div id="conteudo_melhora"></div>
       </div>
     </div>
   </body>
 </html>
 
 <script>
-  
+  function calcular() {
+    var tamanhoHectares = Number(tamanho_hectares.value);
+    var qtdSacasPorHectare = Number(qtd_sacas.value);
+    var valorSacaPorHectare = Number(valor_saca_por_hectare.value);
+
+    var valorProducaoTotal =
+      tamanhoHectares * qtdSacasPorHectare * valorSacaPorHectare;
+    var valorPossivelPerda = valorProducaoTotal * 0.15;
+    var valorFinalComPerda = valorProducaoTotal * 0.85;
+
+    var valorAumento = valorFinalComPerda * 0.05;
+    var valorFinalComAumento = valorFinalComPerda + valorAumento;
+
+    container_relatorio.style.height = '250px';
+
+    tamanho_hectares.value = '';
+    qtd_sacas.value = '';
+    valor_saca_por_hectare.value = '';
+
+    conteudo_perda.innerHTML = `
+    <p><b>Sua produção total: <span>100%</span></b></p>
+    <span>${valorProducaoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Você pode perder até: <span>15%</span></b></p>
+    <span>${valorPossivelPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Valor final: <span>85%</span></b></p>
+    <span>${valorFinalComPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+`;
+    conteudo_melhora.innerHTML = `
+    <p><b>Sua produção total: <span>100%</span></b></p>
+    <span>${valorProducaoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Você pode perder até: <span>15%</span></b></p>
+    <span>${valorPossivelPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+    <p><b>Valor final: <span>85%</span></b></p>
+    <span>${valorFinalComPerda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+  `;
+  }
 </script>
